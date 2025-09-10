@@ -1,21 +1,19 @@
 import arrow from "./trend.png";
-import mouse from "./mouse.png";
 
 const Hero = () => {
   return (
     <div className="mx-auto px-10">
       <section className="relative flex overflow-hidden">
         {/* Text Content */}
-        <div className="md:w-1/2 text-center md:text-left z-10">
-          <h1 className="text-stone-200 md:text-6xl text-4xl font-bold mt-[30px] md:mt-[156px] leading-tight">
+        <div className="md:w-1/2 text-center md:text-left z-10 relative">
+          <h1 className="text-stone-200 md:text-6xl text-4xl font-bold mt-[30px] md:mt-[156px] leading-tight relative inline-block">
             Transform{" "}
             <span className="text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text">
               Your Brand
             </span>
             {/* Arrow icon here */}
             <img
-              style={{ position: "absolute", top: "200px", left: "600px" }}
-              className="w-40"
+              className="absolute w-12 sm:w-20 md:w-28 lg:w-32 top-[18%] right-[2%] sm:right-[10%] md:right-[-22%] lg:right-[-18%]"
               src={arrow}
               alt="trend arrow"
             />
@@ -30,9 +28,11 @@ const Hero = () => {
           </h3>
 
           {/* Button */}
-          <button className="bg-transparent border-[1px] border-stone-600 flex items-center justify-center h-[45px] w-[120px] md:h-[60px] md:w-[160px] cursor-pointer text-stone-300 p-4 rounded-lg text-md md:text-lg font-semibold transition-colors hover:bg-transparent hover:border">
-            Book a Call
-          </button>
+          <div className="flex justify-center md:justify-start">
+            <button className="bg-transparent border-[1px] border-stone-600 flex items-center justify-center h-[45px] w-[120px] md:h-[60px] md:w-[160px] cursor-pointer text-stone-300 p-4 rounded-lg text-md md:text-lg font-semibold transition-colors hover:bg-transparent hover:border">
+              Book a Call
+            </button>
+          </div>
 
           {/* Scroll Down */}
           <div className="flex gap-1 mt-[50px] md:mt-[120px] items-center justify-center md:justify-start">

@@ -1,5 +1,6 @@
 import Hero from "./assets/Components/Hero/Hero";
 import Navbar from "./assets/Components/Navbar/Navbar";
+import WeDo from "./assets/Components/WeDo/WeDo";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <div className="w-[1500px] relative">
           <Navbar />
           <Hero />
-          
+          <WeDo/>
         </div>
       </div>
     </>
