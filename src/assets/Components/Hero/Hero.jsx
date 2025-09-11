@@ -6,7 +6,7 @@ const Hero = () => {
       <section className="relative flex overflow-hidden">
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left z-10 relative">
-          <h1 className="text-stone-200 md:text-6xl text-4xl font-bold mt-[30px] md:mt-[156px] leading-tight relative inline-block">
+          <h1 className="text-stone-200 md:text-6xl text-3xl font-bold  md:mt-[156px] leading-tight relative inline-block">
             Transform{" "}
             <span className="text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text">
               Your Brand
@@ -20,11 +20,12 @@ const Hero = () => {
             <br /> with Expert Design & <br /> Marketing
           </h1>
 
-          <h3 className="text-stone-300 mt-6 mb-8 text-base md:text-lg font-normal text-wrap leading-relaxed">
+          <h3 className="text-stone-300 mt-6 mb-8   md:text-lg font-normal text-wrap leading-relaxed text-base">
             At our agency, we create custom digital marketing strategies and{" "}
             <br className="hidden md:block" /> stunning designs to boost your
             brand and connect with your <br className="hidden md:block" />{" "}
-            audience. Let us help you achieve your goals.
+            audience. <br className="hidden md:block" /> Let us help you achieve
+            your goals.
           </h3>
 
           {/* Button */}

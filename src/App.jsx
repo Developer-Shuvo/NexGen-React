@@ -1,5 +1,6 @@
 import Benifits from "./assets/Components/Benifits/Benifits";
 import Hero from "./assets/Components/Hero/Hero";
+import Invoice from "./assets/Components/Invoice/Invoice";
 import Navbar from "./assets/Components/Navbar/Navbar";
 import Slider from "./assets/Components/Slider/Slider";
 import WeDo from "./assets/Components/WeDo/WeDo";
@@ -21,6 +22,7 @@ function App() {
           <WhyNexgen />
           <Slider/>
           <Benifits/>
+          <Invoice/>
         </div>
       </div>
     </>
