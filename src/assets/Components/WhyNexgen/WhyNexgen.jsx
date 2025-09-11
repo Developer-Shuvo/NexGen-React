@@ -10,7 +10,7 @@ const WhyNexgen = () => {
       <section className="grid md:gap-20 md:grid-cols-2">
         {/* --------- Text Part -------- */}
         <div className="mt-[135px]">
-          <h3 className="md:text-xl text-lg font-bold text-[#4e8bb9]">
+          <h3 className="md:text-xl text-lg items-center  font-bold text-[#4e8bb9]">
             Why Nexgen
           </h3>
           <h1 className="mt-4 text-2xl font-bold text-white md:text-5xl">
