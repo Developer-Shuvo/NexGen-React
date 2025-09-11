@@ -104,7 +104,7 @@ const TestimonialSlider = () => {
         <Slider {...settings}>
           {testimonials.map((item, index) => (
             <div key={index} className="px-6 ">
-              <div className="rounded-2xl bg-black border border-white p-4 sm:p-6 md:p-8 min-h-[160px] sm:min-h-[220px] md:min-h-[250px] flex flex-col">
+              <div className="rounded-2xl bg-black border border-stone-500 p-4 sm:p-6 md:p-8 min-h-[160px] sm:min-h-[220px] md:min-h-[250px] flex flex-col">
                 {/* Profile section */}
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   {/* Profile Image */}

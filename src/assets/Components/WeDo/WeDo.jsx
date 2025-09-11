@@ -17,7 +17,7 @@ const WeDo = () => {
         {/* Card Part-1 */}
         <div className="mt-8 flex flex-col items-center gap-6 md:flex-row md:gap-9 md:justify-start">
           {/* 1st card */}
-          <div className="bg-gray-900 md:h-[277px] h-[180px] md:w-[416px] w-[300px] rounded-lg border border-white md:p-8 p-5">
+          <div className="bg-gray-900 md:h-[277px] h-[180px] md:w-[416px] w-[300px] rounded-lg border border-stone-400 md:p-8 p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -41,7 +41,7 @@ const WeDo = () => {
           </div>
 
           {/* 2nd card */}
-          <div className="bg-gray-900 md:h-[277px] h-[180px] md:w-[416px] w-[300px] rounded-lg border border-white md:p-8 p-5">
+          <div className="bg-gray-900 md:h-[277px] h-[180px] md:w-[416px] w-[300px] rounded-lg border border-stone-400 md:p-8 p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -68,7 +68,7 @@ const WeDo = () => {
         {/* Card Part-2 */}
         <div className="mt-8 flex flex-col items-center gap-6 md:flex-row md:mt-12 md:gap-9 md:justify-end">
           {/* 1st card */}
-          <div className="bg-gray-900 md:h-[277px] h-[180px] md:w-[416px] w-[300px] rounded-lg border border-white md:p-8 p-5">
+          <div className="bg-gray-900 md:h-[277px] h-[180px] md:w-[416px] w-[300px] rounded-lg border border-stone-400 md:p-8 p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
@@ -92,7 +92,7 @@ const WeDo = () => {
           </div>
 
           {/* 2nd card */}
-          <div className="bg-gray-900 md:h-[277px] h-[180px] md:w-[416px] w-[300px] rounded-lg border border-white md:p-8 p-5">
+          <div className="bg-gray-900 md:h-[277px] h-[180px] md:w-[416px] w-[300px] rounded-lg border border-stone-400 md:p-8 p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="44"
