@@ -1,9 +1,11 @@
+import React from "react";
+
 const Invoice = () => {
   return (
-    <div className="mx-auto px-4 md:px-10 ">
-      <section className="relative grid md:grid-cols-2 md:gap-[140px] gap-[80px] md:mt-[224px] mt-[180px]">
-        {/* text */}
-        <div>
+    <div className="mx-auto px-4 md:px-10">
+      <section className="relative flex flex-col md:grid md:grid-cols-2 md:gap-[50px] gap-[10px] md:mt-[224px] mt-[140px] items-center ">
+        {/*============== text section ================ */}
+        <div className="text-left md:text-left">
           <h3 className="text-[#5E44E6] md:text-xl text-lg font-bold">
             Why Nexgen
           </h3>
@@ -12,11 +14,7 @@ const Invoice = () => {
           </h2>
 
           {/* dotted line */}
-          <img
-            className="mt-10 mb-10 w-74 md:mt-20 md:mb-20"
-            src="./icon/dotted line.png"
-            alt="dotted line"
-          />
+          <div className="mt-4 mb-4 w-full md:w-[500px] mx-auto md:mx-0 bg-stone-300 h-[1px] md:mt-5 md:mb-5"></div>
 
           <h3 className="text-2xl font-bold text-white md:text-4xl">
             Always know what you pay
@@ -24,7 +22,7 @@ const Invoice = () => {
 
           {/* little line */}
           <svg
-            className="mt-4 md:mt-5"
+            className="mt-4 md:mt-5 text-left md:mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="84"
             height="4"
@@ -39,11 +37,12 @@ const Invoice = () => {
             />
           </svg>
 
-          <div className="flex items-center gap-2 mt-6">
+          <div className="flex items-center justify-start md:justify-start gap-2 mt-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="27"
-              height="39"
+              width="20"
+              height="28"
+              className="md:w-[27px] md:h-[39px]"
               viewBox="0 0 27 39"
               fill="none"
             >
@@ -98,7 +97,7 @@ const Invoice = () => {
 
           {/* little line */}
           <svg
-            className="mt-4 md:mt-5"
+            className="mt-4 md:mt-5 md:mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="84"
             height="4"
@@ -113,17 +112,32 @@ const Invoice = () => {
             />
           </svg>
 
-          <p className="md:text-base text-xs text-[#F6F6F6] md:mt-5">
+          <p className="md:text-base text-xs text-[#F6F6F6] md:mt-5 mt-3">
             It costs nothing to pay With Nexgen, you'll only <br /> be charged a
             fee when you buy something <br /> or request a payment.
           </p>
         </div>
 
-        {/* animation card */}
-        <div>
-          {/* 1st svg */}
+        {/*============ animation card ================*/}
+        <div className="relative flex flex-col items-center gap-6 mt-10 md:mb-100 w-full md:block">
+          {/* 1st button */}
+          <button className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 text-sm md:text-lg font-semibold shadow-2xl shadow-blue-600 md:absolute md:right-[250px]">
+            Request
+          </button>
+
+          {/* 2nd button */}
+          <button className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 md:text-lg text-sm font-semibold shadow-2xl shadow-green-500 md:absolute md:top-[240px] md:left-[40px]">
+            Nexgen
+          </button>
+
+          {/* 3rd button */}
+          <button className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 text-sm md:text-lg font-semibold shadow-2xl shadow-purple-700 md:absolute md:top-[385px] md:left-[430px]">
+            Request
+          </button>
+
+          {/* 1st svg (blue arrow) */}
           <svg
-            className="md:mt-[210px] mt-[120px]"
+            className="hidden md:block absolute md:top-[10px] md:left-[80px]"
             xmlns="http://www.w3.org/2000/svg"
             width="191"
             height="227"
@@ -136,9 +150,9 @@ const Invoice = () => {
             />
           </svg>
 
-          {/* 2nd svg */}
+          {/* 2nd svg (purple arrow) */}
           <svg
-            className="md:mt-[20px] mt-4 md:ml-[150px] ml-[100px]"
+            className="hidden md:block absolute md:top-[260px] md:left-[246px]"
             xmlns="http://www.w3.org/2000/svg"
             width="276"
             height="126"
@@ -150,21 +164,6 @@ const Invoice = () => {
               fill="#5E44E6"
             />
           </svg>
-
-          {/* 1st button */}
-          <button className="absolute md:top-32 top-[180px] md:left-[225px] left-20 md:h-[90px] h-[60px] md:w-[210px] w-[150px] bg-slate-700 border rounded-lg text-white md:text-lg text-sm font-semibold">
-            Request
-          </button>
-
-          {/* 2nd button */}
-          <button className="absolute md:top-[108px] top-[242px] md:left-[183px] left-0 md:h-[90px] h-[60px] md:w-[210px] w-[150px] bg-slate-700 border rounded-lg text-white md:text-lg text-sm font-semibold shadow-2xl shadow-purple-700">
-            Nexgen
-          </button>
-
-          {/* 3rd button */}
-          <button className="absolute md:top-[146px] top-[278px] md:right-32 right-[250px] md:h-[90px] h-[60px] md:w-[210px] w-[150px] bg-slate-700 border rounded-lg text-white text-lg font-semibold shadow-2xl shadow-blue-600">
-            Request
-          </button>
         </div>
       </section>
     </div>

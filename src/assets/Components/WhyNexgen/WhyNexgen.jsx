@@ -60,7 +60,7 @@
           </div>
 
           {/* ------- Card Part -------- */}
-          <div className="relative  md:mt-[135px] mt-[100px]">
+          <div className="relative hidden md:block  md:mt-[135px] mt-[100px]">
             {/* main card */}
             <div
               className="md:w-[530px] w-[300px] md:h-[735px] h-[450px] bg-slate-800 rounded-2xl  bg-cover bg-center"

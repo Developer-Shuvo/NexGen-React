@@ -6,7 +6,7 @@ const Hero = () => {
       <section className="relative flex overflow-hidden">
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left z-10 relative">
-          <h1 className="text-stone-200 md:text-6xl text-3xl font-bold  md:mt-[156px] leading-tight relative inline-block">
+          <h1 className="text-stone-200 md:text-6xl text-3xl font-bold  md:mt-[100px] leading-tight relative inline-block">
             Transform{" "}
             <span className="text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text">
               Your Brand
