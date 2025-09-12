@@ -1,4 +1,5 @@
 import Benifits from "./assets/Components/Benifits/Benifits";
+import FeaturedWork from "./assets/Components/FeaturedWork/FeaturedWork";
 import Hero from "./assets/Components/Hero/Hero";
 import Invoice from "./assets/Components/Invoice/Invoice";
 import Navbar from "./assets/Components/Navbar/Navbar";
@@ -25,6 +26,7 @@ function App() {
           <Benifits />
           <Invoice />
           <Services />
+          <FeaturedWork />
         </div>
       </div>
     </>
