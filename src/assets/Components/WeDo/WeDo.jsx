@@ -2,7 +2,7 @@ import React from "react";
 
 const WeDo = () => {
   return (
-    <div className="mx-auto px-10">
+    <div id="weDo" className="mx-auto px-10">
       <section className="justify-center item-center flex flex-col mt-10 md:mt-10">
         {/* Heading */}
         <div className="items-center justify-center mt-4 md:mt-20 text-center md:flex-col md:flex">

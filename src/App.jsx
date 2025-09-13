@@ -20,7 +20,7 @@ function App() {
            bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] 
            bg-[size:20px_20px]"
       >
-        <div className="w-[1600px] ">
+        <div className="w-[1500px] ">
           <Navbar />
           <Hero />
           <WeDo />

@@ -6,7 +6,7 @@ import wallpaper from "./delicate-floral-bloom-soft-light.jpg";
 
 const WhyNexgen = () => {
   return (
-    <div className="mx-auto px-4 md:px-10 ">
+    <div id="whyUs" className="mx-auto px-4 md:px-10 ">
       <section className="grid md:gap-20 md:grid-cols-2">
         {/* --------- Text Part -------- */}
         <div className="mt-[135px] ">

@@ -1,12 +1,18 @@
 import arrow from "./trend.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="mx-auto px-10">
+    <div id="hero" className="mx-auto w-[100%] px-10">
       <section className="relative flex overflow-hidden">
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left z-10 relative">
-          <h1 className="text-stone-200 md:text-6xl text-3xl font-bold  md:mt-[100px] leading-tight relative inline-block">
+          <motion.h1
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-stone-200 md:text-6xl text-3xl font-bold  md:mt-[100px] leading-tight relative inline-block"
+          >
             Transform{" "}
             <span className="text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text">
               Your Brand
@@ -18,15 +24,19 @@ const Hero = () => {
               alt="trend arrow"
             />
             <br /> with Expert Design & <br /> Marketing
-          </h1>
+          </motion.h1>
 
-          <h3 className="text-stone-300 mt-6 mb-8   md:text-lg font-normal text-wrap leading-relaxed text-base">
+          <motion.h3
+            whileHover={{ scale: 1.1, color: "#A3E635" }} // scale up and change color on hover
+            transition={{ type: "spring", stiffness: 300 }}
+            className="text-stone-300 mt-6 mb-8   md:text-lg font-normal text-wrap leading-relaxed text-base"
+          >
             At our agency, we create custom digital marketing strategies and{" "}
             <br className="hidden md:block" /> stunning designs to boost your
             brand and connect with your <br className="hidden md:block" />{" "}
             audience. <br className="hidden md:block" /> Let us help you achieve
             your goals.
-          </h3>
+          </motion.h3>
 
           {/* Button */}
           <div className="flex justify-center md:justify-start">
@@ -36,7 +46,10 @@ const Hero = () => {
           </div>
 
           {/* Scroll Down */}
-          <a href="#footer" className="flex gap-1 mt-[50px] md:mt-[120px] items-center justify-center md:justify-start">
+          <a
+            href="#footer"
+            className="flex gap-1 mt-[50px] md:mt-[120px] items-center justify-center md:justify-start"
+          >
             {/* Scroll Icon using SVG */}
             <svg
               className="w-8 h-8 text-stone-200"

@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <div id="footer" className="mx-auto px-4 md:px-10">
       {/* ------------------- Footer Section ---------------- */}
-      <footer className=" border-t border-white mt-[144px] mx-auto">
+        {/* line */}
+          <div className="bg-stone-400 h-[1px] w-[310px] md:w-full md:mt-30 mt-10"></div>
+      <footer className="  mx-auto">
         {/* Logo + Links */}
         <div className="w-full  mx-auto flex flex-col text-center items-center justify-center">
           <div className="flex flex-col items-center">
@@ -39,7 +41,7 @@ const Footer = () => {
           </div>
 
           {/* line */}
-          <div className="bg-[#F0F0F0] h-[1px] w-[310px] md:w-full md:mt-20 mt-5"></div>
+          <div className="bg-stone-400 h-[1px] w-[310px] md:w-full md:mt-20 mt-5"></div>
         </div>
 
         {/* --------- Copyright & Privacy Policy Part --------- */}

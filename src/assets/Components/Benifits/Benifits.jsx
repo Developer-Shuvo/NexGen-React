@@ -1,6 +1,6 @@
 const Benifits = () => {
   return (
-    <div className="mx-auto px-4 md:px-10">
+    <div id="benefits" className="mx-auto px-4 md:px-10">
       {/* --------------- Benefits Section ---------------- */}
       <section className="md:mt-[100px] mt-[50px]">
         {/* Head Line */}

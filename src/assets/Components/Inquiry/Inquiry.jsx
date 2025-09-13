@@ -3,11 +3,11 @@ import image from "./wallpaper (2).jpg"
 
 const Inquiry = () => {
   return (
-    <div className="px-4 md:px-10 mx-auto">
+    <div id="getInTouch" className="px-4 md:px-10 mx-auto">
       {/* inquiry section */}
-      <section className=" mx-auto flex flex-col md:flex-row md:mt-[224px] mt-[60px] md:gap-10 gap-8">
+      <section className=" mx-auto flex flex-col md:flex-row md:mt-[224px] mt-[60px] md:gap-50 gap-8">
         {/* Form */}
-        <div className="w-full md:w-2/3 flex justify-center">
+        <div className="w-full md:w-3/5 flex justify-center">
           <div className="w-full max-w-md px-6 py-6 bg-transparent rounded-lg">
             <h3 className="text-[#4c9bd0] md:text-xl text-md font-bold text-center md:text-left">
               inquiry
@@ -74,7 +74,7 @@ const Inquiry = () => {
 
      {/* Image */}
 <div className="w-full md:w-2/3 flex justify-center items-center px-4">
-  <img className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] h-[200px] sm:h-[250px] md:h-[770px] bg-white rounded-xl" src={image} alt="Inquiry Background" />
+  <img className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] h-[200px] sm:h-[250px] md:h-[700px] bg-white rounded-xl" src={image} alt="Inquiry Background" />
 </div>
 
       </section>

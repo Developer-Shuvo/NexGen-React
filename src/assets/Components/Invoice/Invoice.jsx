@@ -2,12 +2,12 @@ import React from "react";
 
 const Invoice = () => {
   return (
-    <div className="mx-auto px-4 md:px-10">
+    <div id="services" className="mx-auto px-4 md:px-10">
       <section className="relative flex flex-col md:grid md:grid-cols-2 md:gap-[50px] gap-[10px] md:mt-[224px] mt-[140px] items-center ">
         {/*============== text section ================ */}
         <div className="text-left md:text-left">
-          <h3 className="text-[#5E44E6] md:text-xl text-lg font-bold">
-            Why Nexgen
+          <h3 className="text-white md:text-xl text-lg font-bold">
+           System
           </h3>
           <h2 className="mt-2 text-3xl font-bold text-white md:mt-4 md:text-5xl">
             Make invoice anytime, <br /> anywhere
