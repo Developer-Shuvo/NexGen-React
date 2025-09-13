@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
 
         {/* Large Screen Navbar */}
-        <div className=" items-center gap-10 hidden md:flex ">
+        <div className=" items-center gap-10 hidden md:flex sticky z-50 ">
           <div className="px-4 py-2 flex items-center gap-10 border-[1px] border-stone-600 rounded-md">
             <a href="#" className="hover:text-lime-400">
               Home
@@ -94,9 +94,7 @@ const Navbar = () => {
               About Us
             </a>
             <a href="#" onClick={() => setIsOpen(false)}>
-              <button className="hover:text-lime-400">
-                Contact Us
-              </button>
+              <button className="hover:text-lime-400">Contact Us</button>
             </a>
           </div>
         </div>

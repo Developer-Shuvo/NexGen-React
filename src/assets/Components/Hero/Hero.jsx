@@ -36,7 +36,7 @@ const Hero = () => {
           </div>
 
           {/* Scroll Down */}
-          <div className="flex gap-1 mt-[50px] md:mt-[120px] items-center justify-center md:justify-start">
+          <a href="#footer" className="flex gap-1 mt-[50px] md:mt-[120px] items-center justify-center md:justify-start">
             {/* Scroll Icon using SVG */}
             <svg
               className="w-8 h-8 text-stone-200"
@@ -64,7 +64,7 @@ const Hero = () => {
               </g>
             </svg>
             <h4 className="text-white">Scroll Down</h4>
-          </div>
+          </a>
         </div>
       </section>
     </div>

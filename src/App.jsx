@@ -1,13 +1,15 @@
 import Benifits from "./assets/Components/Benifits/Benifits";
 import FeaturedWork from "./assets/Components/FeaturedWork/FeaturedWork";
+import Footer from "./assets/Components/Footer/Footer";
 import Hero from "./assets/Components/Hero/Hero";
+import Inquiry from "./assets/Components/Inquiry/Inquiry";
 import Invoice from "./assets/Components/Invoice/Invoice";
 import Navbar from "./assets/Components/Navbar/Navbar";
 import Services from "./assets/Components/Services/Services";
 import Slider from "./assets/Components/Slider/Slider";
 import WeDo from "./assets/Components/WeDo/WeDo";
 import WhyNexgen from "./assets/Components/WhyNexgen/WhyNexgen";
-import Inquiry from "./assets/Inquiry/Inquiry";
+
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
           <Services />
           <FeaturedWork />
           <Inquiry />
+          <Footer />
         </div>
       </div>
     </>
