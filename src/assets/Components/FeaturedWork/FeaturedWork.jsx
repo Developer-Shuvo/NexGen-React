@@ -61,10 +61,10 @@ const FeaturedWork = () => {
       <section className="mt-[110px] flex flex-col items-center">
         {/* Headline */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-white md:text-6xl">
+          <h1 className="text-3xl font-bold text-stone-100 md:text-6xl">
             Our Featured Work
           </h1>
-          <p className="mt-3 md:mt-6 text-base md:text-lg font-semibold text-[#FFF5E1]">
+          <p className="mt-3 md:mt-6 text-base md:text-lg font-semibold text-stone-300">
             Explore our diverse range of creative projects.
           </p>
         </div>
@@ -72,15 +72,19 @@ const FeaturedWork = () => {
         {/* Card Slider */}
         <div className="w-full relative overflow-hidden">
           <div
-            className={`flex justify-center md:gap-8 gap-3 mt-[60px] md:mt-[82px] transition-transform duration-500 ease-in-out`}
+            className={`flex justify-center md:gap-8 gap-3 mt-[60px] 
+                md:mt-[50px] transition-transform duration-500 ease-in-out`}
           >
             {visibleCards.map((card, index) => (
               <div
                 key={index}
-                className={`p-2 h-[250px] w-full max-w-[320px] md:h-[409px] md:max-w-[641px] border rounded-lg ${card.backgroundColor} flex flex-col items-center justify-center`}
+                className={`p-2 h-[250px] w-full max-w-[320px] 
+                    md:h-[409px] md:max-w-[641px] border rounded-lg
+                     ${card.backgroundColor} flex flex-col items-center justify-center`}
               >
                 <div
-                  className={`p-1 border rounded-lg h-[230px] w-[300px] md:h-[393px] md:w-[624px] flex items-center justify-center ${card.innerColor}`}
+                  className={`p-1 border rounded-lg h-[230px] w-[300px] 
+                    md:h-[393px] md:w-[624px] flex items-center justify-center ${card.innerColor}`}
                 >
                   <div className="text-center p-4">
                     <h3 className="text-xl font-bold text-gray-800">
@@ -95,12 +99,13 @@ const FeaturedWork = () => {
         </div>
 
         {/* Arrow buttons */}
-        <div className="flex justify-center mt-[40px] md:mt-[64px] gap-3">
+        <div className="flex justify-center mt-[20px] md:mt-[40px] gap-3 md:gap-6">
           {/* arrow 1 */}
           <div>
             <button
               onClick={prevSlide}
-              className="p-4 border border-white rounded-full transition-colors duration-200 hover:bg-gray-700"
+              className="p-4 border border-white rounded-full transition-colors 
+              duration-200 hover:bg-gray-700"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +115,9 @@ const FeaturedWork = () => {
                 fill="none"
               >
                 <path
-                  d="M25.5 14.2461H10.2875L17.275 7.25859L15.5 5.49609L5.5 15.4961L15.5 25.4961L17.2625 23.7336L10.2875 16.7461H25.5V14.2461Z"
+                  d="M25.5 14.2461H10.2875L17.275 
+                  7.25859L15.5 5.49609L5.5 15.4961L15.5 25.4961L17.2625
+                   23.7336L10.2875 16.7461H25.5V14.2461Z"
                   fill="#F6F6F6"
                 />
               </svg>
@@ -120,7 +127,8 @@ const FeaturedWork = () => {
           <div>
             <button
               onClick={nextSlide}
-              className="p-4 border border-white rounded-full transition-colors duration-200 hover:bg-gray-700"
+              className="p-4 border border-white rounded-full transition-colors 
+              duration-200 hover:bg-gray-700"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

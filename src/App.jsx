@@ -7,6 +7,7 @@ import Services from "./assets/Components/Services/Services";
 import Slider from "./assets/Components/Slider/Slider";
 import WeDo from "./assets/Components/WeDo/WeDo";
 import WhyNexgen from "./assets/Components/WhyNexgen/WhyNexgen";
+import Inquiry from "./assets/Inquiry/Inquiry";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Invoice />
           <Services />
           <FeaturedWork />
+          <Inquiry />
         </div>
       </div>
     </>

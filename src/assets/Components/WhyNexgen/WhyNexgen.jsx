@@ -9,11 +9,11 @@
       <div className="mx-auto px-4 md:px-10 ">
         <section className="grid md:gap-20 md:grid-cols-2">
           {/* --------- Text Part -------- */}
-          <div className="mt-[135px]">
-            <h3 className="md:text-xl text-lg items-center  font-bold text-[#4e8bb9]">
+          <div className="mt-[135px] ">
+            <h3 className="md:text-xl text-lg pl-6 md:ml-0 items-center  font-bold text-[#4e8bb9]">
               Why Nexgen
             </h3>
-            <h1 className="mt-4 text-2xl font-bold text-white md:text-5xl">
+            <h1 className="mt-4 text-2xl  font-bold text-white md:text-5xl">
               Unlock Your Potential with <br /> Comprehensive Digital Marketing{" "}
               <br /> Solutions Tailored for You
             </h1>
