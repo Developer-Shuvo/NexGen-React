@@ -1,20 +1,36 @@
+import { motion } from "framer-motion";
+
 const Benifits = () => {
   return (
     <div id="benefits" className="mx-auto px-4 md:px-10">
       {/* --------------- Benefits Section ---------------- */}
       <section className="md:mt-[100px] mt-[50px]">
         {/* Head Line */}
-        <div className="items-center justify-center text-center md:text-lg ">
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="items-center justify-center text-center md:text-lg "
+        >
           <h3 className="text-[#5E44E6] md:text-xl text-sm font-bold">
             Benefits
           </h3>
           <h1 className="mt-4 text-base md:text-5xl font-bold text-white leading-tight">
             Why it’s worth growing with Nexgen
           </h1>
-        </div>
+        </motion.div>
 
         {/* ---------- Card part ------------ */}
-        <div className="items-center justify-center gap-6 md:flex">
+
+        {/* 1st Card row */}
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="items-center justify-center gap-6 md:flex"
+        >
           {/* card-1 */}
           <div className="mt-[22px] flex justify-center">
             <div className="bg-slate-800 h-[180px] w-[240px] md:h-[318px] md:w-[417px] rounded-lg border-[0.4px] border-stone-400 p-6 md:p-8">
@@ -95,10 +111,16 @@ const Benifits = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* second row */}
-        <div className="items-center justify-center gap-6 md:flex">
+        {/* 2nd card row */}
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+        
+        className="items-center justify-center gap-6 md:flex">
           {/* card-4 */}
           <div className="mt-[20px] flex justify-center">
             <div className="bg-slate-800 h-[180px] w-[240px] md:h-[280px] md:w-[417px] rounded-lg border-[0.4px] border-stone-400 p-5 md:p-8">
@@ -154,7 +176,7 @@ const Benifits = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

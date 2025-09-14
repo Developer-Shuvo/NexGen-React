@@ -9,6 +9,7 @@ import image3 from "./tax-inspector.png";
 import image4 from "./man (1).png";
 import image5 from "./young-man.png";
 import star from "./star.png";
+import { motion } from "framer-motion";
 
 const TestimonialSlider = () => {
   const settings = {
@@ -88,7 +89,13 @@ const TestimonialSlider = () => {
   return (
     <div id="review" className="mx-auto px-4 md:px-10 py-10 max-w-7xl ">
       {/* Baby image section */}
-      <section className="flex flex-col justify-center items-center text-center mb-12 md:mb-20 ">
+      <motion.section
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false, amount: 0.3 }}
+        className="flex flex-col justify-center items-center text-center mb-12 md:mb-20 "
+      >
         <img
           className="w-28 h-28 sm:w-40 sm:h-40 md:w-[400px] md:h-[350px] object-contain"
           src={baby}
@@ -97,7 +104,7 @@ const TestimonialSlider = () => {
         <h2 className="mt-4 text-lg sm:text-2xl md:text-5xl font-bold text-stone-100">
           Pay with peace of mind
         </h2>
-      </section>
+      </motion.section>
 
       {/* Slider Section */}
       <div className="max-w-[1200px] mx-auto ">
@@ -106,7 +113,7 @@ const TestimonialSlider = () => {
             <div key={index} className="px-6 ">
               <div className="rounded-2xl bg-black border border-stone-500 p-4 sm:p-6 md:p-8 min-h-[160px] sm:min-h-[220px] md:min-h-[250px] flex flex-col">
                 {/* Profile section */}
-                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <motion.div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   {/* Profile Image */}
                   <img
                     src={item.image}
@@ -145,7 +152,7 @@ const TestimonialSlider = () => {
                         ))}
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Text section */}
                 <p className="text-stone-300 text-xs sm:text-sm md:text-base leading-relaxed">

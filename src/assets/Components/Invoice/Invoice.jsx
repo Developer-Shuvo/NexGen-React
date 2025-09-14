@@ -1,14 +1,18 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Invoice = () => {
   return (
     <div id="services" className="mx-auto px-4 md:px-10">
       <section className="relative flex flex-col md:grid md:grid-cols-2 md:gap-[50px] gap-[10px] md:mt-[224px] mt-[140px] items-center ">
         {/*============== text section ================ */}
-        <div className="text-left md:text-left">
-          <h3 className="text-white md:text-xl text-lg font-bold">
-           System
-          </h3>
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="text-left md:text-left"
+        >
+          <h3 className="text-white md:text-xl text-lg font-bold">System</h3>
           <h2 className="mt-2 text-3xl font-bold text-white md:mt-4 md:text-5xl">
             Make invoice anytime, <br /> anywhere
           </h2>
@@ -116,24 +120,44 @@ const Invoice = () => {
             It costs nothing to pay With Nexgen, you'll only <br /> be charged a
             fee when you buy something <br /> or request a payment.
           </p>
-        </div>
+        </motion.div>
 
         {/*============ animation card ================*/}
         <div className="relative flex flex-col items-center gap-6 mt-10 md:mb-100 w-full md:block">
           {/* 1st button */}
-          <button className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 text-sm md:text-lg font-semibold shadow-2xl shadow-blue-600 md:absolute md:right-[250px]">
+          <motion.button
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border
+             rounded-lg text-stone-300 text-sm md:text-lg font-semibold shadow-2xl
+              shadow-blue-600 md:absolute md:right-[200px]"
+          >
             Request
-          </button>
+          </motion.button>
 
           {/* 2nd button */}
-          <button className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 md:text-lg text-sm font-semibold shadow-2xl shadow-green-500 md:absolute md:top-[240px] md:left-[40px]">
+          <motion.button
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 md:text-lg text-sm font-semibold shadow-2xl shadow-green-500 md:absolute md:top-[240px] md:left-[30px]"
+          >
             Nexgen
-          </button>
+          </motion.button>
 
           {/* 3rd button */}
-          <button className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 text-sm md:text-lg font-semibold shadow-2xl shadow-purple-700 md:absolute md:top-[385px] md:left-[430px]">
+          <motion.button
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 text-sm md:text-lg font-semibold shadow-2xl shadow-purple-700 md:absolute md:top-[385px] md:left-[430px]"
+          >
             Request
-          </button>
+          </motion.button>
 
           {/* 1st svg (blue arrow) */}
           <svg

@@ -3,13 +3,20 @@ import image from "./shuvo.png";
 import arrow from "./next.png";
 import coding from "./programming-background-concept.jpg";
 import wallpaper from "./delicate-floral-bloom-soft-light.jpg";
+import { motion } from "framer-motion";
 
 const WhyNexgen = () => {
   return (
     <div id="whyUs" className="mx-auto px-4 md:px-10 ">
       <section className="grid md:gap-20 md:grid-cols-2">
         {/* --------- Text Part -------- */}
-        <div className="mt-[135px] ">
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="mt-[135px] "
+        >
           <h3 className="md:text-xl text-lg text-center md:text-left  font-bold text-[#4e8bb9]">
             Why Nexgen
           </h3>
@@ -59,35 +66,45 @@ const WhyNexgen = () => {
             consequat. Duis aute irure dolor in reprehenderit in <br />
             voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
-        </div>
+        </motion.div>
 
         {/* ------- Card Part -------- */}
         <div className="relative hidden md:block md:mt-[135px] mt-[100px]">
           {/* main card */}
           <div
-            className="md:w-[530px] w-[300px] md:h-[735px] h-[450px] bg-slate-800 rounded-2xl  bg-cover bg-center"
+            className="md:w-[530px] w-[300px] md:h-[735px] h-[450px] bg-slate-800 rounded-2xl  bg-cover bg-center "
             style={{ backgroundImage: `url(${wallpaper})` }}
           >
             <div className="md:pt-[42px] pt-[32px] md:pl-[22px] pl-4 md:pr-[22px] pr-4">
               {/* ------- */}
               <div className="flex items-center gap-4 md:gap-6">
                 <img
-                  className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-yellow-600 p-[2px]"
+                  className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-yellow-600 p-[2px] "
                   src={image}
                   alt=""
                 />
               </div>
-              {/* ------ */}
-              <img
+              {/* ---inside image--- */}
+              <motion.img
+                initial={{ x: -200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: false, amount: 0.3 }}
                 src={coding}
-                className="w-full md:h-[305px] h-[250px] rounded-xl bg-blue-600 mt-10"
+                className="w-full md:h-[305px] h-[250px] rounded-xl bg-blue-600 mt-10 "
                 alt=""
               />
             </div>
           </div>
 
           {/* mini card 1 */}
-          <div className="md:top-27 top-15 md:left-70 left-30 absolute md:h-[98px] h-[70px] md:w-[350px] w-[200px] bg-gray-900 rounded-lg ">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="md:top-27 top-15 md:left-70 left-30 absolute md:h-[98px] h-[70px] md:w-[350px] w-[200px] bg-gray-900 rounded-lg "
+          >
             <div className="flex items-center justify-end gap-2 text-center pt-[12px]">
               <img
                 className="w-10 h-10 pl-2 md:w-12 md:h-12 rounded-full"
@@ -120,10 +137,16 @@ const WhyNexgen = () => {
                 </defs>
               </svg>
             </div>
-          </div>
+          </motion.div>
 
           {/* mini card 2 */}
-          <div className="md:top-120 top-70 md:-left-20 -left-1 absolute md:h-[98px] h-[70px] md:w-[350px] w-[200px] bg-gray-900 rounded-lg">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.3 }}
+          
+          className="md:top-120 top-70 md:-left-20 -left-1 absolute md:h-[98px] h-[70px] md:w-[350px] w-[200px] bg-gray-900 rounded-lg">
             <div className="items-center md:py-[12px] py-2 md:px-4 px-2">
               <h4 className="text-xs text-white md:text-base md:font-semibold">
                 feedback
@@ -162,7 +185,7 @@ const WhyNexgen = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

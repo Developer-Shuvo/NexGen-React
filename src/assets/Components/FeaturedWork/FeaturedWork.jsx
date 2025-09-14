@@ -1,25 +1,39 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const cardData = [
   {
     title: "Project Alpha",
     description: "A dynamic web application built for a client.",
-    backgroundColor: "bg-slate-600",
+    backgroundColor: "bg-gradient-to-br from-green-800 to-emerald-900",
+    innerColor: "bg-emerald-200",
+  },
+  {
+    title: "Books World",
+    description: "A dynamic web application built for a Book store.",
+    backgroundColor: "bg-gradient-to-br from-cyan-900 to-blue-900",
+    innerColor: "bg-cyan-200",
+  },
+  {
+    title: "Portfolio Hub",
+    description: "Showcase platform for designers and developers.",
+    backgroundColor: "bg-gradient-to-br from-slate-900 to-gray-800",
     innerColor: "bg-slate-300",
   },
   {
     title: "Design Beta",
     description: "UI/UX design for a mobile e-commerce platform.",
-    backgroundColor: "bg-blue-600",
-    innerColor: "bg-blue-300",
+    backgroundColor: "bg-gradient-to-br from-indigo-900 to-blue-800",
+    innerColor: "bg-indigo-200",
   },
   {
     title: "Branding Gamma",
     description: "Full brand identity and logo design for a startup.",
-    backgroundColor: "bg-purple-600",
-    innerColor: "bg-purple-300",
+    backgroundColor: "bg-gradient-to-br from-purple-900 to-fuchsia-800",
+    innerColor: "bg-purple-200",
   },
 ];
+
 
 const FeaturedWork = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -60,37 +74,58 @@ const FeaturedWork = () => {
       {/* Our Featured Work Section */}
       <section className="mt-[110px] flex flex-col items-center">
         {/* Headline */}
-        <div className="text-center">
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="text-center"
+        >
           <h1 className="text-3xl font-bold text-stone-100 md:text-6xl">
             Our Featured Work
           </h1>
           <p className="mt-3 md:mt-6 text-base md:text-lg font-semibold text-stone-300">
             Explore our diverse range of creative projects.
           </p>
-        </div>
+        </motion.div>
 
         {/* Card Slider */}
         <div className="w-full relative overflow-hidden">
           <div
             className={`flex justify-center md:gap-8 gap-3 mt-[60px] 
-                md:mt-[50px] transition-transform duration-500 ease-in-out`}
+        md:mt-[50px] transition-transform duration-500 ease-in-out`}
           >
             {visibleCards.map((card, index) => (
               <div
                 key={index}
                 className={`p-2 h-[250px] w-full max-w-[320px] 
-                    md:h-[409px] md:max-w-[641px] border rounded-lg
-                     ${card.backgroundColor} flex flex-col items-center justify-center`}
+            md:h-[409px] md:max-w-[641px] 
+            rounded-2xl relative group perspective`}
               >
+                {/* Outer Card */}
                 <div
-                  className={`p-1 border rounded-lg h-[230px] w-[300px] 
-                    md:h-[393px] md:w-[624px] flex items-center justify-center ${card.innerColor}`}
+                  className={`h-full w-full rounded-2xl border ${card.backgroundColor} 
+            flex flex-col items-center justify-center transition-transform 
+            duration-500 ease-out transform-gpu group-hover:rotate-x-6 group-hover:-rotate-y-6 group-hover:scale-[1.02] shadow-2xl`}
                 >
-                  <div className="text-center p-4">
-                    <h3 className="text-xl font-bold text-gray-800">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm text-gray-600">{card.description}</p>
+                  {/* Inner Glass Effect */}
+                  <div
+                    className={`relative h-[230px] w-[300px] md:h-[393px] md:w-[624px] 
+              flex items-center justify-center rounded-xl overflow-hidden ${card.innerColor} 
+              bg-opacity-90 backdrop-blur-md shadow-xl`}
+                  >
+                    {/* Glow Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+
+                    {/* Content */}
+                    <div className="relative text-center p-6">
+                      <h3 className="text-xl md:text-3xl font-extrabold text-gray-900 drop-shadow-lg">
+                        {card.title}
+                      </h3>
+                      <p className="mt-3 text-sm md:text-xl text-gray-700 leading-relaxed">
+                        {card.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

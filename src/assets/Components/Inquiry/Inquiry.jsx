@@ -1,13 +1,20 @@
 import React from "react";
-import image from "./wallpaper (2).jpg"
+import image from "./wallpaper (2).jpg";
+import { motion } from "framer-motion";
 
 const Inquiry = () => {
   return (
     <div id="getInTouch" className="px-4 md:px-10 mx-auto">
       {/* inquiry section */}
       <section className=" mx-auto flex flex-col md:flex-row md:mt-[224px] mt-[60px] md:gap-50 gap-8">
-        {/* Form */}
-        <div className="w-full md:w-3/5 flex justify-center">
+        {/*================ Form ==================*/}
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="w-full md:w-3/5 flex justify-center"
+        >
           <div className="w-full max-w-md px-6 py-6 bg-transparent rounded-lg">
             <h3 className="text-[#4c9bd0] md:text-xl text-md font-bold text-center md:text-left">
               inquiry
@@ -70,13 +77,22 @@ const Inquiry = () => {
               Book a Call
             </button>
           </div>
-        </div>
+        </motion.div>
 
-     {/* Image */}
-<div className="w-full md:w-2/3 flex justify-center items-center px-4">
-  <img className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] h-[200px] sm:h-[250px] md:h-[700px] bg-white rounded-xl" src={image} alt="Inquiry Background" />
-</div>
-
+        {/* Image */}
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="w-full md:w-2/3 flex justify-center items-center px-4"
+        >
+          <img
+            className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] h-[200px] sm:h-[250px] md:h-[700px] bg-white rounded-xl"
+            src={image}
+            alt="Inquiry Background"
+          />
+        </motion.div>
       </section>
     </div>
   );

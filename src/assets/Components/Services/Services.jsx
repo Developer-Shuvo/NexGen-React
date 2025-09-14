@@ -1,11 +1,17 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Services = () => {
   return (
     <div className="mx-auto px-4 md:px-10">
       <section className="grid gap-[60px] md:gap-[136px] md:grid-cols-2 mt-[120px]">
         {/* Text Section */}
-        <div className="text-center md:text-left">
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="text-center md:text-left"
+        >
           <h3 className="text-sm font-bold text-white md:text-lg">Services</h3>
           <h1 className="mt-4 text-3xl font-bold text-white md:mt-5 md:text-5xl">
             Benefits That You Can <br /> Feel Immediately
@@ -24,12 +30,18 @@ const Services = () => {
           >
             Find the Perfect Solution
           </button>
-        </div>
+        </motion.div>
 
         {/*============ Card Section ==============*/}
-        <div className="flex flex-col items-center gap-6 md:flex-row md:gap-8">
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="flex flex-col items-center gap-6 md:flex-row md:gap-8"
+        >
           {/* card 1 */}
-          <div className="w-full max-w-xs rounded-xl bg-cyan-800 p-[38px] md:w-auto">
+          <motion.div className="w-full max-w-xs rounded-xl bg-cyan-800 p-[38px] md:w-auto">
             <div className="text-center">
               <h3 className="text-xl font-bold text-white">Website Pack</h3>
               <p className="text-white">Customer Reach & Budget</p>
@@ -75,10 +87,10 @@ const Services = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* card 2 */}
-          <div className="w-full max-w-xs rounded-xl bg-red-950 p-[38px] md:w-auto">
+          <motion.div className="w-full max-w-xs rounded-xl bg-red-950 p-[38px] md:w-auto">
             <div className="text-center">
               <h3 className="text-xl font-bold text-white">Website Pack</h3>
               <p className="text-white">Customer Reach & Budget</p>
@@ -124,8 +136,8 @@ const Services = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     </div>
   );
