@@ -3,45 +3,43 @@ import logo from "./favicon.png";
 
 const Footer = () => {
   return (
-    <div id="footer" className="mx-auto px-4 md:px-10">
+    <div id="footer" className="w-full px-4 md:px-10">
       {/* ------------------- Footer Section ---------------- */}
-        {/* line */}
-          <div className="bg-stone-400 h-[1px] w-[310px] md:w-full md:mt-30 mt-10"></div>
-      <footer className="  mx-auto">
+      <div className="bg-stone-400 h-[1px] w-full mt-10 md:mt-30 mx-auto"></div>
+      <footer className="w-full mx-auto">
         {/* Logo + Links */}
-        <div className="w-full  mx-auto flex flex-col text-center items-center justify-center">
-          <div className="flex flex-col items-center">
+        <div className="w-full mx-auto flex flex-col text-center items-center justify-center">
+          <div className="flex flex-col items-center mt-8">
             <img
-              className="mt-4"
               height={70}
               width={70}
               src={logo}
               alt="This is logo"
             />
-
-            <h1>Nexgen Innovators</h1>
+            <h1 className="text-xl md:text-2xl mt-2 font-semibold text-stone-300">Nexgen Innovators</h1>
           </div>
+          
           {/* categories */}
-          <div className="flex flex-wrap gap-3  text-base font-semibold text-stone-300  md:text-lg md:gap-8 justify-center px-6 mt-4">
-            <a className="hover:underline " href="#">
+          <div className="flex flex-wrap gap-3 text-base font-semibold text-stone-300 md:text-lg md:gap-8 justify-center px-6 mt-4">
+            <a className="hover:underline" href="#">
               About Us
             </a>
-            <a className="hover:underline " href="#">
+            <a className="hover:underline" href="#">
               Our Services
             </a>
-            <a className="hover:underline " href="#">
+            <a className="hover:underline" href="#">
               Contact Us
             </a>
-            <a className="hover:underline " href="#">
+            <a className="hover:underline" href="#">
               Blog Posts
             </a>
-            <a className="hover:underline " href="#">
+            <a className="hover:underline" href="#">
               Get Started
             </a>
           </div>
 
           {/* line */}
-          <div className="bg-stone-400 h-[1px] w-[310px] md:w-full md:mt-20 mt-5"></div>
+          <div className="bg-stone-400 h-[1px] w-full mt-5 md:mt-20"></div>
         </div>
 
         {/* --------- Copyright & Privacy Policy Part --------- */}

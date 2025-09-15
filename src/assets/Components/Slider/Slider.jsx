@@ -16,7 +16,7 @@ const TestimonialSlider = () => {
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 3,
+    slidesToShow: 3, // default for desktop
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
@@ -34,13 +34,13 @@ const TestimonialSlider = () => {
         },
       },
       {
-        breakpoint: 768, // small tablet
+        breakpoint: 768, // mobile landscape / small tablet
         settings: {
           slidesToShow: 1,
         },
       },
       {
-        breakpoint: 350, // mobile
+        breakpoint: 480, // small mobile
         settings: {
           slidesToShow: 1,
         },
@@ -87,7 +87,7 @@ const TestimonialSlider = () => {
   ];
 
   return (
-    <div id="review" className="mx-auto px-4 md:px-10 py-10 max-w-7xl ">
+    <div id="review" className="mx-auto px-6 md:px-10 py-10 max-w-7xl ">
       {/* Baby image section */}
       <motion.section
         initial={{ y: -100, opacity: 0 }}
@@ -110,7 +110,7 @@ const TestimonialSlider = () => {
       <div className="max-w-[1200px] mx-auto ">
         <Slider {...settings}>
           {testimonials.map((item, index) => (
-            <div key={index} className="px-6 ">
+            <div key={index} className="px-3 sm:px-4">
               <div className="rounded-2xl bg-black border border-stone-500 p-4 sm:p-6 md:p-8 min-h-[160px] sm:min-h-[220px] md:min-h-[250px] flex flex-col">
                 {/* Profile section */}
                 <motion.div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">

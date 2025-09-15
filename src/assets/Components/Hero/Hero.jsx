@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div id="hero" className="mx-auto w-full px-4 sm:px-6 md:px-10">
+    <div id="hero" className="mx-auto max-w-[1420px] px-8 sm:px-6 md:px-10">
       <section className="relative flex flex-col md:flex-row items-center md:items-start overflow-hidden">
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left z-10 relative mt-10 md:mt-[100px]">
@@ -30,7 +30,7 @@ const Hero = () => {
             Marketing
           </motion.h1>
 
-          {/* Subheading */}
+          {/* Description*/}
           <motion.h3
             initial={{ x: -200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -38,8 +38,11 @@ const Hero = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="text-stone-300 mt-6 mb-8 text-base sm:text-base md:text-lg font-normal leading-relaxed break-words max-w-full sm:max-w-[90%] md:max-w-2xl mx-auto md:mx-0"
           >
-            At our agency, we create custom digital marketing strategies and
-            stunning designs to boost your brand and connect with your audience.
+            At our agency, we create custom <br className="md:hidden block" />
+            digital marketing strategies and <br className="md:hidden block" />
+            stunning designs to boost your brand{" "}
+            <br className="md:hidden block" />
+            and connect with your audience. <br className="md:hidden block" />
             Let us help you achieve your goals.
           </motion.h3>
 

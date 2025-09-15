@@ -15,7 +15,7 @@ const WhyNexgen = () => {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="mt-[135px] "
+          className="mt-[70px] md:mt-[120px] "
         >
           <h3 className="md:text-xl text-lg text-center md:text-left  font-bold text-[#4e8bb9]">
             Why Nexgen
@@ -69,7 +69,7 @@ const WhyNexgen = () => {
         </motion.div>
 
         {/* ------- Card Part -------- */}
-        <div className="relative hidden md:block md:mt-[135px] mt-[100px]">
+        <div className="relative hidden md:block md:mt-[135px] mt-[80px]">
           {/* main card */}
           <div
             className="md:w-[530px] w-[300px] md:h-[735px] h-[450px] bg-slate-800 rounded-2xl  bg-cover bg-center "
