@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const Services = () => {
   return (
-    <div className="mx-auto px-4 md:px-10">
+    <div className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
       <section className="grid gap-[60px] md:gap-[136px] md:grid-cols-2 mt-[80px]">
         {/* ------------Text Section-------------- */}
         <motion.div

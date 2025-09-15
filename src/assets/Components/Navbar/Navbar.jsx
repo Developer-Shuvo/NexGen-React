@@ -5,157 +5,108 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
 
-  // Close menu on scroll and on resize
   useEffect(() => {
     const handleScroll = () => {
+      setIsFixed(window.scrollY > 0); // navbar fixed after 300px
       if (isOpen) setIsOpen(false);
     };
-    const handleResize = () => {
-      if (window.innerWidth >= 768 && isOpen) {
-        setIsOpen(false);
-      }
-    };
+
+    const handleResize = () => window.innerWidth >= 768 && setIsOpen(false);
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, [isOpen]);
 
+  const navLinks = [
+    { name: "Home", href: "#hero" },
+    { name: "We Do", href: "#weDo" },
+    { name: "Why Us", href: "#whyUs" },
+    { name: "Review", href: "#review" },
+    { name: "Benefits", href: "#benefits" },
+    { name: "Services", href: "#services" },
+    { name: "Contact Us", href: "#getInTouch" },
+  ];
+
   return (
-    <div>
-      <header className="sticky top-0 z-[100] bg-transparent backdrop-blur-md text-white w-full overflow-x-hidden">
-        <motion.nav
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4 md:px-10"
-        >
-          {/* Logo & Company */}
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="navbar logo" className="h-10 w-auto" />
-            <span className="text-lg font-semibold text-stone-300">
-              NexGen Innovators
-            </span>
-          </div>
+    <header
+      className={`w-full transition-all duration-5000 ease-in-out px-4 py-4 md:px-10 max-w-[1500px] ${
+    isFixed
+      ? "fixed top-0 z-50 shadow-md bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
+      : "relative bg-transparent"
+  }`}
+    >
+      <motion.nav
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="w-full mx-auto flex items-center justify-between"
+      >
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <img src={logo} alt="Logo" className="h-10 w-auto" />
+          <span className="text-lg font-semibold text-stone-300">
+            NexGen Innovators
+          </span>
+        </div>
 
-          {/* Large Screen Navbar */}
-          <div className="hidden md:flex items-center gap-10">
-            <div className="px-4 py-2 flex items-center gap-6 border border-stone-600 hover:border-cyan-700 transition duration-500 rounded-md">
-              <a href="#hero" className="hover:text-stone-400">
-                Home
-              </a>
-              <a href="#weDo" className="hover:text-stone-400">
-                We Do
-              </a>
-              <a href="#whyUs" className="hover:text-stone-400">
-                Why Us
-              </a>
-              <a href="#review" className="hover:text-stone-400">
-                Review
-              </a>
-              <a href="#benefits" className="hover:text-stone-400">
-                Benefits
-              </a>
-              <a href="#services" className="hover:text-stone-400">
-                Services
-              </a>
-            </div>
-            <a href="#getInTouch">
-              <button className="px-4 py-2 border border-stone-600 rounded-md hover:border-cyan-700 transition duration-500 hover:shadow-md shadow-cyan-900 hover:text-stone-400">
-                Contact Us
-              </button>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.slice(0, -1).map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-white hover:text-stone-400 transition duration-300"
+            >
+              {link.name}
             </a>
-          </div>
+          ))}
+          <a href={navLinks[navLinks.length - 1].href}>
+            <button className="px-4 py-2 border border-stone-600 rounded-md hover:border-cyan-700 transition duration-300 hover:shadow-md hover:text-stone-400">
+              {navLinks[navLinks.length - 1].name}
+            </button>
+          </a>
+        </div>
 
-          {/* Mobile Menu Button (Placed outside the menu for a fixed position) */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden z-[120] text-2xl text-green-600 focus:outline-none"
-            aria-label="Toggle mobile menu"
-            aria-expanded={isOpen}
-          >
-            {isOpen ? <FaTimes /> : <FaBars />}
-          </button>
+        {/* Mobile Toggle Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-2xl text-green-600 focus:outline-none z-50"
+          aria-label="Toggle mobile menu"
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
 
-          {/* Mobile Slider Menu - MODIFIED SECTION */}
+        {/* Mobile Sidebar */}
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: isOpen ? 0 : "-100%" }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className="fixed top-[70px] left-0 h-full w-3/4 max-w-xs shadow-xl z-40 flex flex-col md:hidden"
+        >
           <div
-            className={`fixed top-0 left-0 h-full w-full bg-gray-900 transform transition-transform duration-500 z-[110] md:hidden ${
-              isOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+            className="flex flex-col gap-6 py-10 px-6 min-h-screen h-auto bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
           >
-            <div className="flex justify-between items-center p-6 border-b border-gray-700">
-              <div className="flex items-center gap-3">
-                <img src={logo} alt="navbar logo" className="h-8 w-auto" />
-                <span className="text-lg font-semibold text-stone-300">
-                  NexGen Innovators
-                </span>
-              </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-2xl text-white"
-                aria-label="Close mobile menu"
-              >
-                <FaTimes />
-              </button>
-            </div>
-            <div className="flex flex-col items-start px-6 gap-6 py-6">
+            {navLinks.map((link) => (
               <a
-                href="#hero"
+                key={link.name}
+                href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="hover:text-stone-400 text-white text-lg w-full"
+                className="text-white text-lg hover:text-stone-400 transition duration-300"
               >
-                Home
+                {link.name}
               </a>
-              <a
-                href="#weDo"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-stone-400 text-white text-lg w-full"
-              >
-                We Do
-              </a>
-              <a
-                href="#whyUs"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-stone-400 text-white text-lg w-full"
-              >
-                Why Us
-              </a>
-              <a
-                href="#review"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-stone-400 text-white text-lg w-full"
-              >
-                Review
-              </a>
-              <a
-                href="#benefits"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-stone-400 text-white text-lg w-full"
-              >
-                Benefits
-              </a>
-              <a
-                href="#services"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-stone-400 text-white text-lg w-full"
-              >
-                Services
-              </a>
-              <a
-                href="#getInTouch"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-stone-400 text-white text-lg"
-              >
-                Contact Us
-              </a>
-            </div>
+            ))}
           </div>
-        </motion.nav>
-      </header>
-    </div>
+        </motion.div>
+      </motion.nav>
+    </header>
   );
 };
 

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const WhyNexgen = () => {
   return (
-    <div id="whyUs" className="mx-auto px-4 md:px-10 ">
+    <div id="whyUs" className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
       <section className="grid md:gap-20 md:grid-cols-2">
         {/* --------- Text Part -------- */}
         <motion.div

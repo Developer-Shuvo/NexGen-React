@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Benifits = () => {
   return (
-    <div id="benefits" className="mx-auto px-4 md:px-10">
+    <div id="benefits" className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
       {/* --------------- Benefits Section ---------------- */}
       <section className="md:mt-[100px] mt-[50px]">
         {/* Head Line */}
@@ -23,7 +23,7 @@ const Benifits = () => {
 
         {/* ---------- Card part ------------ */}
 
-        {/* 1st Card row */}
+        {/* 1 st Card row */}
         <motion.div
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -113,7 +113,7 @@ const Benifits = () => {
           </div>
         </motion.div>
 
-        {/* 2nd card row */}
+        {/* 2 nd card row */}
         <motion.div
           initial={{ x: 200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}

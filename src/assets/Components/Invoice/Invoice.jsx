@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 const Invoice = () => {
   return (
-    <div id="services" className="mx-auto px-4 md:px-10">
-      <section className="relative flex flex-col md:grid md:grid-cols-2 md:gap-[50px] gap-[10px] md:mt-[224px] mt-[140px] items-center ">
+    <div id="services" className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
+      <section className="relative flex flex-col xl:grid xl:grid-cols-2 md:gap-[50px] gap-[10px] md:mt-[224px] mt-[140px] items-center">
         {/*============== text section ================ */}
         <motion.div
           initial={{ x: -200, opacity: 0 }}
@@ -80,17 +80,17 @@ const Invoice = () => {
             </svg>
 
             <h4 className="text-lg font-semibold text-white md:text-xl">
-              No Hidden Fees – Ever!
+              No Hidden Fees Ever!
             </h4>
           </div>
 
           <p className="md:text-base text-xs text-[#F6F6F6] mt-5">
-            Pay Only When You Spend – A small fee applies only when you make a{" "}
+            Pay Only When You Spend A small fee applies only when you make a{" "}
             <br /> purchase or request a payment.
           </p>
 
           <p className="md:text-base text-xs text-[#F6F6F6] mt-2 font-normal">
-            No Subscriptions, No Surprises – Just smooth, transparent <br />{" "}
+            No Subscriptions, No Surprises Just smooth, transparent <br />{" "}
             transactions with Nexgen
           </p>
 
@@ -123,16 +123,16 @@ const Invoice = () => {
         </motion.div>
 
         {/*============ animation card ================*/}
-        <div className="relative flex flex-col items-center gap-6 mt-10 md:mb-100 w-full md:block">
+        <div className="hidden lg:relative lg:flex lg:flex-col lg:items-center lg:gap-6 lg:mt-10 lg:mb-100 w-full">
           {/* 1st button */}
           <motion.button
             initial={{ x: 200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border
-             rounded-lg text-stone-300 text-sm md:text-lg font-semibold shadow-2xl
-              shadow-blue-600 md:absolute md:right-[200px]"
+            className="h-[50px] w-[140px] lg:h-[90px] lg:w-[210px] bg-slate-700 border
+      rounded-lg text-stone-300 text-sm lg:text-lg font-semibold shadow-2xl
+      shadow-blue-600 lg:absolute lg:right-[200px]"
           >
             Request
           </motion.button>
@@ -143,7 +143,7 @@ const Invoice = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 md:text-lg text-sm font-semibold shadow-2xl shadow-green-500 md:absolute md:top-[240px] md:left-[30px]"
+            className="h-[50px] w-[140px] lg:h-[90px] lg:w-[210px] bg-slate-700 border rounded-lg text-stone-300 lg:text-lg text-sm font-semibold shadow-2xl shadow-green-500 lg:absolute lg:top-[240px] lg:left-[30px]"
           >
             Nexgen
           </motion.button>
@@ -154,14 +154,14 @@ const Invoice = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="h-[50px] w-[140px] md:h-[90px] md:w-[210px] bg-slate-700 border rounded-lg text-stone-300 text-sm md:text-lg font-semibold shadow-2xl shadow-purple-700 md:absolute md:top-[385px] md:left-[430px]"
+            className="h-[50px] w-[140px] lg:h-[90px] lg:w-[210px] bg-slate-700 border rounded-lg text-stone-300 text-sm lg:text-lg font-semibold shadow-2xl shadow-purple-700 lg:absolute lg:top-[385px] lg:left-[430px]"
           >
             Request
           </motion.button>
 
           {/* 1st svg (blue arrow) */}
           <svg
-            className="hidden md:block absolute md:top-[10px] md:left-[80px]"
+            className="hidden lg:block absolute lg:top-[10px] lg:left-[80px]"
             xmlns="http://www.w3.org/2000/svg"
             width="191"
             height="227"
@@ -176,7 +176,7 @@ const Invoice = () => {
 
           {/* 2nd svg (purple arrow) */}
           <svg
-            className="hidden md:block absolute md:top-[260px] md:left-[246px]"
+            className="hidden lg:block absolute lg:top-[260px] lg:left-[246px]"
             xmlns="http://www.w3.org/2000/svg"
             width="276"
             height="126"

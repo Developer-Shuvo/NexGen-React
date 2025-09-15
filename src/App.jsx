@@ -19,7 +19,7 @@ function App() {
         bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] 
         bg-[size:20px_20px]"
       >
-        <div className="w-full">
+        <div className="max-w-full overflow-hidden">
           <Navbar />
           <Hero />
           <WeDo />

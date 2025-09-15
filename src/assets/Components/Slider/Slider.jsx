@@ -12,35 +12,24 @@ import star from "./star.png";
 import { motion } from "framer-motion";
 
 const TestimonialSlider = () => {
+  // Slick settings
   const settings = {
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 3, // default for desktop
+    slidesToShow: 3, // desktop default
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
     responsive: [
       {
-        breakpoint: 1280, // large laptop
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 1024, // tablet
+        breakpoint: 1280, // Tablet & smaller
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 768, // mobile landscape / small tablet
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 480, // small mobile
+        breakpoint: 768, // Mobile
         settings: {
           slidesToShow: 1,
         },
@@ -48,6 +37,7 @@ const TestimonialSlider = () => {
     ],
   };
 
+  // Testimonials data
   const testimonials = [
     {
       name: "Albert Flores",
@@ -87,14 +77,14 @@ const TestimonialSlider = () => {
   ];
 
   return (
-    <div id="review" className="mx-auto px-6 md:px-10 py-10 max-w-7xl ">
-      {/* Baby image section */}
+    <div id="review" className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
+      {/* Baby image + title */}
       <motion.section
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
-        className="flex flex-col justify-center items-center text-center mb-12 md:mb-20 "
+        className="flex flex-col justify-center items-center text-center mb-12 md:mb-20"
       >
         <img
           className="w-28 h-28 sm:w-40 sm:h-40 md:w-[400px] md:h-[350px] object-contain"
@@ -107,31 +97,27 @@ const TestimonialSlider = () => {
       </motion.section>
 
       {/* Slider Section */}
-      <div className="max-w-[1200px] mx-auto ">
+      <div className="max-w-[1200px] mx-auto overflow-hidden">
         <Slider {...settings}>
           {testimonials.map((item, index) => (
-            <div key={index} className="px-3 sm:px-4">
-              <div className="rounded-2xl bg-black border border-stone-500 p-4 sm:p-6 md:p-8 min-h-[160px] sm:min-h-[220px] md:min-h-[250px] flex flex-col">
-                {/* Profile section */}
+            <div key={index} className="px-3 sm:px-4 overflow-hidden">
+              <div className="rounded-2xl bg-black border border-stone-500 p-4 sm:p-6 md:p-8 !min-h-[160px] sm:!min-h-[220px] md:!min-h-[250px] flex flex-col">
+                {/* Profile Section */}
                 <motion.div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  {/* Profile Image */}
                   <img
                     src={item.image}
                     alt="profile"
                     className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 object-cover rounded-full"
                   />
                   <div>
-                    {/* Name */}
                     <h1 className="text-sm sm:text-base md:text-lg font-bold text-stone-100">
                       {item.name}
                     </h1>
-
-                    {/* Title */}
                     <p className="text-stone-300 text-xs sm:text-sm">
                       {item.role}
                     </p>
 
-                    {/* Rating */}
+                    {/* Stars */}
                     <div className="flex mt-1">
                       {Array.from({ length: item.stars }).map((_, i) => (
                         <img
@@ -154,7 +140,7 @@ const TestimonialSlider = () => {
                   </div>
                 </motion.div>
 
-                {/* Text section */}
+                {/* Review Text */}
                 <p className="text-stone-300 text-xs sm:text-sm md:text-base leading-relaxed">
                   {item.text}
                 </p>

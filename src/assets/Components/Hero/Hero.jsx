@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div id="hero" className="mx-auto max-w-[1420px] px-8 sm:px-6 md:px-10">
+    <div id="hero" className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
       <section className="relative flex flex-col md:flex-row items-center md:items-start overflow-hidden">
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left z-10 relative mt-10 md:mt-[100px]">

@@ -4,26 +4,24 @@ import { motion } from "framer-motion";
 
 const Inquiry = () => {
   return (
-    <div id="getInTouch" className="mx-auto px-4 md:px-10">
+    <div id="getInTouch" className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
       {/* inquiry section */}
-      <section className="mx-auto flex flex-col md:flex-row md:mt-[224px] mt-[60px] md:gap-20 items-center">
+      <section className="mx-auto flex flex-col xl:flex-row md:mt-[120px] mt-[60px] md:gap-10 items-center">
         {/*================ Form ==================*/}
         <motion.div
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="w-full md:w-2/5 flex justify-center"
+          className="x:w-full md:w-1/2 flex justify-center"
         >
-          {" "}
           <div className="w-full max-w-lg p-6 bg-transparent rounded-lg">
-            {" "}
             <h3 className="text-[#4c9bd0] md:text-xl text-md font-bold text-center md:text-left">
-              inquiry{" "}
-            </h3>{" "}
+              inquiry
+            </h3>
             <h2 className="mt-2 text-center md:text-left text-3xl font-bold text-blue-500 md:mt-4 md:text-5xl">
-              Get in Touch{" "}
-            </h2>{" "}
+              Get in Touch
+            </h2>
             <p className="md:mt-6 text-center md:text-left mt-2 md:text-lg text-sm font-semibold text-[#F6F6F6]">
               We're here to help with your custom needs.
             </p>
@@ -84,19 +82,22 @@ const Inquiry = () => {
               <button className="w-full px-3 py-2 bg-blue-600 rounded-lg md:h-[54px] h-[45px] mt-5 text-white md:text-lg text-sm font-semibold flex items-center justify-center">
                 Book a Call
               </button>
+                         {" "}
             </form>
+                     {" "}
           </div>
+                 {" "}
         </motion.div>
-        {/* Image */}
+        {/*============ Image ============= */}
         <motion.div
           initial={{ x: 200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="w-full md:w-2/3 flex justify-center items-center px-4"
+          className="w-full md:w-1/2 flex justify-center items-center px-4"
         >
           <img
-            className="w-full max-w-xs md:max-w-none md:w-[700px] h-[200px] sm:h-[250px] md:h-[700px] bg-white rounded-xl"
+            className="w-[30%] sm:w-[40%] md:w-[60%] lg:w-[70%] xl:w-[80%] object-cover rounded-xl mt-8 md:mt-0 h-[300px] sm:h-[420px] md:h-[500px] lg:h-[600px] xl:h-[700px]"
             src={image}
             alt="Inquiry Background"
           />
