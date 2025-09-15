@@ -97,7 +97,7 @@ const Inquiry = () => {
           className="w-full md:w-1/2 flex justify-center items-center px-4"
         >
           <img
-            className="w-[30%] sm:w-[40%] md:w-[60%] lg:w-[70%] xl:w-[80%] object-cover rounded-xl mt-8 md:mt-0 h-[300px] sm:h-[420px] md:h-[500px] lg:h-[600px] xl:h-[700px]"
+            className="w-[60%] sm:w-[50%] md:w-[80%] lg:w-[80%] xl:w-[80%] object-cover rounded-xl mt-8 md:mt-0 h-[300px] sm:h-[400px] md:h-[400px] lg:h-[500px] xl:h-[700px]"
             src={image}
             alt="Inquiry Background"
           />

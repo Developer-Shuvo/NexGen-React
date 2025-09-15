@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const WeDo = () => {
   return (
-    <div id="weDo" className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
+    <div  className="mx-auto w-full max-w-[1500px] px-4 md:px-10">
       <section className="justify-center item-center flex flex-col mt-10 md:mt-20">
         {/* Heading */}
         <motion.div

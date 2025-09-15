@@ -69,7 +69,7 @@ const WhyNexgen = () => {
         </motion.div>
 
         {/* ------- Card Part -------- */}
-        <div className="relative hidden md:block md:mt-[135px] mt-[80px]">
+        <div  className="relative hidden md:block md:mt-[135px] mt-[80px]">
           {/* main card */}
           <div
             className="md:w-[530px] w-[300px] md:h-[735px] h-[450px] bg-slate-800 rounded-2xl  bg-cover bg-center "

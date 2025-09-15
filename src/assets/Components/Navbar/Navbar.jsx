@@ -39,7 +39,7 @@ const Navbar = () => {
       className={`w-full transition-all duration-5000 ease-in-out px-4 py-4 md:px-10 max-w-[1500px] ${
     isFixed
       ? "fixed top-0 z-50 shadow-md bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
-      : "relative bg-transparent"
+      : "relative bg-transparent "
   }`}
     >
       <motion.nav
@@ -77,7 +77,7 @@ const Navbar = () => {
         {/* Mobile Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-2xl text-green-600 focus:outline-none z-50"
+          className="md:hidden text-2xl text-orange-700 focus:outline-none z-50"
           aria-label="Toggle mobile menu"
         >
           {isOpen ? <FaTimes /> : <FaBars />}
@@ -98,7 +98,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-white text-lg hover:text-stone-400 transition duration-300"
+                className="text-stone-100 hover:underline text-md hover:text-stone-400 transition duration-300"
               >
                 {link.name}
               </a>

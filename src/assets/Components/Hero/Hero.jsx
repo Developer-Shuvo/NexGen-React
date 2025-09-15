@@ -47,17 +47,28 @@ const Hero = () => {
           </motion.h3>
 
           {/* Button */}
-          <motion.div
-            initial={{ x: 200, opacity: 0 }}
+          <motion.a
+            href="#getInTouch"
+            initial={{ x: -200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex justify-center md:justify-start"
           >
-            <button className="bg-transparent border border-stone-600 flex items-center justify-center h-[45px] w-[120px] sm:h-[50px] sm:w-[140px] md:h-[60px] md:w-[160px] cursor-pointer text-stone-300 p-4 rounded-lg text-md sm:text-md md:text-lg font-semibold transition-colors hover:bg-transparent hover:border">
-              Book a Call
-            </button>
-          </motion.div>
+            <div className="flex justify-center md:justify-start">
+              <motion.button
+                whileHover={{ scale: 1.3, rotateX: 360, rotateY: 1 }}
+                whileTap={{ scale: 1, rotateX: 10, rotateY: -1 }}
+                transition={{ type: "spring", stiffness: 150, damping: 50 }}
+                className="bg-transparent border border-stone-600  flex items-center justify-center 
+                 h-[45px] w-[120px] sm:h-[50px] sm:w-[140px] md:h-[60px] md:w-[160px] 
+                 cursor-pointer text-stone-300 p-4 rounded-lg text-md sm:text-md md:text-lg 
+                 font-semibold transition-colors hover:bg-transparent hover:border-yellow-400
+                  hover:text-yellow-400 hover:ml-8 ml-2 ease-in-out duration-500"
+              >
+                Book a Call
+              </motion.button>
+            </div>
+          </motion.a>
 
           {/* Scroll Down */}
           <motion.a
@@ -82,7 +93,9 @@ const Hero = () => {
                 />
               </g>
             </svg>
-            <h4 className="text-white text-sm sm:text-base">Scroll Down</h4>
+            <h4 id="weDo" className="text-white text-sm sm:text-base">
+              Scroll Down
+            </h4>
           </motion.a>
         </div>
       </section>

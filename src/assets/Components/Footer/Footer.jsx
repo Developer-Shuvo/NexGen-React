@@ -11,11 +11,7 @@ const Footer = () => {
         {/* Logo + Links */}
         <div className="w-full flex flex-col items-center justify-center text-center">
           <div className="flex flex-col items-center mt-8">
-            <img
-              src={logo}
-              alt="Logo"
-              className="h-[70px] w-[70px]"
-            />
+            <img src={logo} alt="Logo" className="h-[70px] w-[70px]" />
             <h1 className="text-xl md:text-2xl mt-2 font-semibold text-stone-300">
               Nexgen Innovators
             </h1>
@@ -47,7 +43,8 @@ const Footer = () => {
         {/* --------- Copyright & Policy --------- */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-5 mt-6 md:mt-8 mb-10 md:mb-20 text-center md:text-left">
           <div className="text-base font-normal text-[#F0F0F0]">
-            © 2025 Nexgen Innovators. All rights reserved.
+            © 2025 <span className="text-green-600">Developer Shuvo</span> . All
+            rights reserved.
           </div>
 
           <div className="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 text-base font-normal text-[#F0F0F0] underline">
