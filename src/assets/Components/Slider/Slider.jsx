@@ -141,14 +141,14 @@ const TestimonialSlider = () => {
                 </motion.div>
 
                 {/* Review Text */}
-                <p  className="text-stone-300 text-xs sm:text-sm md:text-base leading-relaxed">
+                <p className="text-stone-300 text-xs sm:text-sm md:text-base leading-relaxed">
                   {item.text}
                 </p>
               </div>
             </div>
           ))}
-        </Slider >
-      </div >
+        </Slider>
+      </div>
     </div>
   );
 };
