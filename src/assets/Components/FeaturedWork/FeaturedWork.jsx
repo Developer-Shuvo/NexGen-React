@@ -89,53 +89,52 @@ const FeaturedWork = () => {
           </p>
         </motion.div>
 
-        {/* Card Slider */}
-        <div className="w-full relative overflow-hidden flex justify-center">
+{/* Card Slider */}
+<div className="w-full relative overflow-hidden flex justify-center">
+  <div
+    className={`flex justify-center md:gap-6 lg:gap-8 gap-3 mt-[40px] md:mt-[60px] transition-transform duration-500 ease-in-out`}
+  >
+    {visibleCards.map((card, index) => (
+      <div
+        key={index}
+        className={`p-2 
+          h-[240px] w-[90%] max-w-[320px] 
+          md:h-[340px] md:max-w-[460px] 
+          lg:h-[460px] lg:max-w-[680px]
+          rounded-2xl relative group perspective`}
+      >
+        {/* Outer Card */}
+        <div
+          className={`h-full w-full flex items-center justify-center rounded-2xl border ${card.backgroundColor} 
+            transition-transform duration-500 ease-out transform-gpu 
+            group-hover:rotate-x-6 group-hover:-rotate-y-6 group-hover:scale-[1.02] shadow-2xl`}
+        >
+          {/* Inner Card */}
           <div
-            className={`flex justify-center md:gap-6 lg:gap-8 gap-3 mt-[40px] md:mt-[60px] transition-transform duration-500 ease-in-out`}
+            className={`relative 
+              h-[85%] w-[85%]   /* smaller than outer card */
+              flex items-center justify-center rounded-xl overflow-hidden ${card.innerColor} 
+              bg-opacity-90 backdrop-blur-md shadow-xl`}
           >
-            {visibleCards.map((card, index) => (
-              <div
-                key={index}
-                className={`p-2 
-                  h-[220px] w-[90%] max-w-[300px] 
-                  md:h-[300px] md:max-w-[400px] 
-                  lg:h-[409px] lg:max-w-[641px]
-                  rounded-2xl relative group perspective`}
-              >
-                {/* Outer Card */}
-                <div
-                  className={`h-full w-full rounded-2xl border ${card.backgroundColor} 
-                    flex flex-col items-center justify-center transition-transform
-                    duration-500 ease-out transform-gpu group-hover:rotate-x-6 group-hover:-rotate-y-6 group-hover:scale-[1.02] shadow-2xl`}
-                >
-                  {/* Inner Card */}
-                  <div
-                    className={`relative 
-                      h-[200px] w-[90%] 
-                      md:h-[280px] md:w-[360px] 
-                      lg:h-[393px] lg:w-[624px] 
-                      flex items-center justify-center rounded-xl overflow-hidden ${card.innerColor} 
-                      bg-opacity-90 backdrop-blur-md shadow-xl`}
-                  >
-                    {/* Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+            {/* Glow Effect */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
-                    {/* Content */}
-                    <div className="relative text-center p-4 md:p-6">
-                      <h3 className="text-lg md:text-2xl lg:text-3xl font-extrabold text-gray-900 drop-shadow-lg">
-                        {card.title}
-                      </h3>
-                      <p className="mt-2 md:mt-3 text-xs md:text-sm lg:text-xl text-gray-700 leading-relaxed">
-                        {card.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+            {/* Content */}
+            <div className="relative text-center p-4 md:p-6">
+              <h3 className="text-lg md:text-2xl lg:text-3xl font-extrabold text-gray-900 drop-shadow-lg">
+                {card.title}
+              </h3>
+              <p className="mt-2 md:mt-3 text-xs md:text-sm lg:text-xl text-gray-700 leading-relaxed">
+                {card.description}
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* Arrow Buttons */}
         <div className="flex justify-center mt-[20px] md:mt-[40px] gap-3 md:gap-6">

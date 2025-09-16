@@ -44,20 +44,20 @@ const WhyNexgen = () => {
           {/* Customer Testimonial */}
           <div className="flex flex-col items-center md:items-start md:flex-row gap-2 md:gap-6">
             <img
-              className="w-12 h-12 rounded-full  bg-yellow-600 p-[2px]"
+              className="w-12 h-12 rounded-full  bg-yellow-400 p-[2px]"
               src={image}
               alt=""
             />
             <div className="text-center md:text-left">
-              <h2 className="md:text-lg text-base font-bold text-[#F6F6F6]">
+              <h2 className="md:text-xl text-lg font-bold text-[#F6F6F6]">
                 Albert Flores
               </h2>
-              <h4 className="md:text-base text-xs md:font-semibold text-[#F6F6F6]">
+              <h4 className="md:text-base text-md md:font-semibold text-[#F6F6F6]">
                 Role at @Company name
               </h4>
             </div>
           </div>
-          <p className="text-[#F6F6F6] text-center md:text-left md:mt-8 mt-5 md:text-md text-xs">
+          <p className="text-stone-200 text-center md:text-left md:mt-8 mt-4 md:text-md text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             <br />
             sed do eiusmod tempor incididunt ut labore et dolore <br />
@@ -69,7 +69,7 @@ const WhyNexgen = () => {
         </motion.div>
 
         {/* ------- Card Part -------- */}
-        <div  className="relative hidden md:block md:mt-[135px] mt-[80px]">
+        <div className="relative hidden md:block md:mt-[135px] mt-[80px]">
           {/* main card */}
           <div
             className="md:w-[530px] w-[300px] md:h-[735px] h-[450px] bg-slate-800 rounded-2xl  bg-cover bg-center "
@@ -79,7 +79,8 @@ const WhyNexgen = () => {
               {/* ------- */}
               <div className="flex items-center gap-4 md:gap-6">
                 <img
-                  className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-yellow-600 p-[2px] "
+                  className="w-10 h-10 md:w-14 md:h-14 rounded-full
+                   bg-yellow-400 p-[2px] "
                   src={image}
                   alt=""
                 />
@@ -145,8 +146,8 @@ const WhyNexgen = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
-          
-          className="md:top-120 top-70 md:-left-20 -left-1 absolute md:h-[98px] h-[70px] md:w-[350px] w-[200px] bg-gray-900 rounded-lg">
+            className="md:top-120 top-70 md:-left-20 -left-1 absolute md:h-[98px] h-[70px] md:w-[350px] w-[200px] bg-gray-900 rounded-lg"
+          >
             <div className="items-center md:py-[12px] py-2 md:px-4 px-2">
               <h4 className="text-xs text-white md:text-base md:font-semibold">
                 feedback

@@ -84,14 +84,14 @@ const TestimonialSlider = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
-        className="flex flex-col justify-center items-center text-center mb-12 md:mb-20"
+        className="flex mt-10 md:mt-20 flex-col justify-center items-center text-center mb-12 md:mb-20"
       >
         <img
           className="w-28 h-28 sm:w-40 sm:h-40 md:w-[400px] md:h-[350px] object-contain"
           src={baby}
           alt="baby"
         />
-        <h2 className="mt-4 text-lg sm:text-2xl md:text-5xl font-bold text-stone-100">
+        <h2 className="mt-4 text-xl sm:text-2xl md:text-5xl font-bold text-stone-100">
           Pay with peace of mind
         </h2>
       </motion.section>
