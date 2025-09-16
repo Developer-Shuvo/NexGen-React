@@ -1,3 +1,4 @@
+import { FaArrowDown } from "react-icons/fa";
 import arrow from "./trend.png";
 import { motion } from "framer-motion";
 
@@ -61,7 +62,7 @@ const Hero = () => {
                 transition={{ type: "spring", stiffness: 150, damping: 50 }}
                 className="bg-transparent border border-stone-600  flex items-center justify-center 
                  h-[45px] w-[120px] sm:h-[50px] sm:w-[140px] md:h-[60px] md:w-[160px] 
-                 cursor-pointer text-stone-300 p-4 rounded-lg text-md sm:text-md md:text-lg 
+                 cursor-pointer text-stone-300 p-4 rounded-lg text-sm sm:text-md md:text-lg 
                  font-semibold transition-colors hover:bg-transparent hover:border-yellow-400
                   hover:text-yellow-400 hover:ml-8 ml-2 ease-in-out duration-500"
               >
@@ -70,10 +71,10 @@ const Hero = () => {
             </div>
           </motion.a>
 
-          {/* Scroll Down */}
+          {/* ---------Scroll Down------- */}
           <motion.a
             href="#footer"
-            className="flex gap-2 mt-8 sm:mt-12 md:mt-[120px] items-center justify-center md:justify-start"
+            className="flex gap-2 mt-8 sm:mt-12 md:mt-[120px] items-center justify-center md:justify-start pb-6"
           >
             <svg
               className="w-8 h-8 sm:w-10 sm:h-10 text-stone-200"
@@ -83,18 +84,34 @@ const Hero = () => {
               <g>
                 <path
                   d="M50.2,1.25c6.71,1.85,12.72,5.44,17.51,10.23c7.19,7.19,11.65,17.11,11.65,28.03V83.2c0,10.92-4.46,20.84-11.65,28.03
-                  c-7.19,7.19-17.11,11.65-28.03,11.65c-10.92,0-20.84-4.46-28.03-11.65C4.46,104.04,0,94.11,0,83.2V39.51
-                  c0-10.92,4.46-20.84,11.65-28.03C17.24,5.9,24.48,1.96,32.55,0.48C37.42-0.42,45.7,0.01,50.2,1.25z
-                  M39.23,30.82c4.15,0,7.55,3.4,7.55,7.55v7.78c0,4.15-3.4,7.55-7.55,7.55c-4.15,0-7.55-3.4-7.55-7.55v-7.78
-                  C31.68,34.22,35.07,30.82,39.23,30.82z
-                  M61.08,18.11c-5.49-5.49-13.07-8.91-21.4-8.91c-8.33,0-15.9,3.41-21.4,8.91c-5.49,5.49-8.91,13.07-8.91,21.4V83.2
-                  c0,8.33,3.41,15.9,8.91,21.4c5.49,5.49,13.07,8.91,21.4,8.91c8.33,0,15.9-3.41,21.4-8.91c5.49-5.49,8.91-13.07,8.91-21.4V39.51
-                  C69.99,31.18,66.58,23.61,61.08,18.11z"
+        c-7.19,7.19-17.11,11.65-28.03,11.65c-10.92,0-20.84-4.46-28.03-11.65C4.46,104.04,0,94.11,0,83.2V39.51
+        c0-10.92,4.46-20.84,11.65-28.03C17.24,5.9,24.48,1.96,32.55,0.48C37.42-0.42,45.7,0.01,50.2,1.25z
+        M39.23,30.82c4.15,0,7.55,3.4,7.55,7.55v7.78c0,4.15-3.4,7.55-7.55,7.55c-4.15,0-7.55-3.4-7.55-7.55v-7.78
+        C31.68,34.22,35.07,30.82,39.23,30.82z
+        M61.08,18.11c-5.49-5.49-13.07-8.91-21.4-8.91c-8.33,0-15.9,3.41-21.4,8.91c-5.49,5.49-8.91,13.07-8.91,21.4V83.2
+        c0,8.33,3.41,15.9,8.91,21.4c5.49,5.49,13.07,8.91,21.4,8.91c8.33,0,15.9-3.41,21.4-8.91c5.49-5.49,8.91-13.07,8.91-21.4V39.51
+        C69.99,31.18,66.58,23.61,61.08,18.11z"
                 />
               </g>
             </svg>
-            <h4 id="weDo" className="text-white text-sm sm:text-base">
+
+            <h4
+              id="weDo"
+              className="text-white text-sm sm:text-base flex items-center
+               gap-6"
+            >
               Scroll Down
+              <motion.span
+                animate={{ y: [0, 15, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.2,
+                  ease: "easeInOut",
+                }}
+                className="flex items-center"
+              >
+                <FaArrowDown className="text-lime-500 text-base sm:text-lg md:text-2xl  " />
+              </motion.span>
             </h4>
           </motion.a>
         </div>
